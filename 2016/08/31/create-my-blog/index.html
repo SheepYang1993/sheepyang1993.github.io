@@ -38,7 +38,13 @@
 <meta property="og:image" content="http://i.imgur.com/Wh07j8Z.png">
 <meta property="og:image" content="http://i.imgur.com/0cbSS57.png">
 <meta property="og:image" content="http://i.imgur.com/sRCmbto.png">
-<meta property="og:updated_time" content="2016-09-01T05:01:02.027Z">
+<meta property="og:image" content="http://i.imgur.com/PmmUXQp.png">
+<meta property="og:image" content="http://i.imgur.com/7DgbYHx.png">
+<meta property="og:image" content="http://i.imgur.com/1SYsX1K.png">
+<meta property="og:image" content="http://i.imgur.com/5wJJjIR.png">
+<meta property="og:image" content="http://i.imgur.com/ALTwkX1.png">
+<meta property="og:image" content="http://i.imgur.com/097JEax.png">
+<meta property="og:updated_time" content="2016-09-01T05:30:08.150Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用 Hexo + Github Pages 搭建个人博客">
 <meta name="twitter:description" content="前言
@@ -275,17 +281,18 @@
 <p><img src="http://i.imgur.com/OBewksw.png" alt=""></p>
 <p>每次编辑、修改文章后执行: <strong>hexo clean</strong> ， <strong>hexo g</strong> 清除缓存重新编译，启动服务后可在本地查看博客。</p>
 <h3 id="三、-修改Hexo主题、配置"><a href="#三、-修改Hexo主题、配置" class="headerlink" title="三、 修改Hexo主题、配置"></a>三、 修改Hexo主题、配置</h3><p>Hexo静态博客想要安装主题也容易，在Github上找到你喜欢的主题，然后执行类似命令： <strong>git clone <a href="https://github.com/heroicyang/hexo-theme-modernist.git" target="_blank" rel="external">https://github.com/heroicyang/hexo-theme-modernist.git</a> themes/modernist</strong>  </p>
+<p>这边有一些常用的主题大家可以拿去用 <a href="http://www.zhihu.com/question/24422335" title="Hexo主题" target="_blank" rel="external">Hexo主题</a></p>
 <p>下面以本人博客主题Yilia为例,首先找到<a href="https://github.com/litten/hexo-theme-yilia" title="Yilia Github地址" target="_blank" rel="external">Yilia Github地址</a>,点击右上角 <strong>Clone or download</strong> 复制地址到粘贴板  </p>
 <p><img src="http://i.imgur.com/A2WG6bc.png" alt=""></p>
 <p>在 <strong>git bash</strong> 中执行： <strong>git clone <a href="https://github.com/litten/hexo-theme-yilia.git" target="_blank" rel="external">https://github.com/litten/hexo-theme-yilia.git</a> themes/yilia</strong>  </p>
 <p><img src="http://i.imgur.com/sjU6mr5.png" alt=""></p>
 <p>执行后yilia主题就下载在themes目录了</p>
 <p><img src="http://i.imgur.com/NampAre.png" alt=""></p>
-<p>接着配置Yilia主题，打开 <strong>_config.yml</strong> 文件（根目录下的_config.yml，不是themes文件下的_config.yml）将themes修改为yilia，与themes文件夹下yilia目录同名。</p>
+<p>接着配置Yilia主题，打开 <strong>_config.yml</strong> 文件（根目录下的 <strong>_config.yml</strong> ，不是themes文件下的 <strong>_config.yml</strong> ）将themes修改为yilia，与themes文件夹下yilia目录同名。</p>
 <p><img src="http://i.imgur.com/oyo3h8r.png" alt=""></p>
 <p>之后依次执行 <strong>hexo clean</strong> ， <strong>hexo g</strong> ， <strong>hexo s</strong> 重新编译生成静态页面，启动本地服务。打开 <strong><a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a></strong> 就可以预览效果啦！</p>
 <p><img src="http://i.imgur.com/j7uHMc4.png" alt=""></p>
-<p>接下来就是设置各种相关配置了，比如 姓名/头像/友情链接 等等。<br>先打开根目录下的<strong>_config.yml</strong>进行修改</p>
+<p>接下来就是设置各种相关配置了，比如 姓名/头像/友情链接 等等。<br>先打开根目录下的 <strong>_config.yml</strong> 进行修改</p>
 <p><img src="http://i.imgur.com/SgjQM20.png" alt=""></p>
 <p>再打开themes/yilia主题下的<strong>_config.yml</strong>进行修改</p>
 <p><img src="http://i.imgur.com/5rg0iH6.png" alt=""></p>
@@ -301,6 +308,19 @@
 <p>仓库的名字是 <strong>xxx.github.io</strong> ， <strong>xxx</strong> 是你的账户名，比如我这边账户名是 <strong>SheepYang1993</strong> ，那么仓库名就是 <strong>sheepyang1993.github.io</strong></p>
 <p><img src="http://i.imgur.com/sRCmbto.png" alt=""></p>
 <p>完成该步骤你就可以访问 <strong>Github Pages</strong> 了，下面我们要把本地的Hexo博客部署到 <strong>Github Pages</strong> 上。</p>
+<p>首先我们打开 <strong>cmd</strong> 命令行工具，输入 <strong>ping xxx.github.io</strong> 命令， <strong>xxx</strong> 是你Github的账户名，获得 <strong>xxx.github.io</strong> 的ip地址</p>
+<p>打开根目录下的 <strong>_config.yml</strong> ，设置你要部署的Github地址</p>
+<p><img src="http://i.imgur.com/PmmUXQp.png" alt=""></p>
+<p><img src="http://i.imgur.com/7DgbYHx.png" alt=""></p>
+<p>打开根目录下的/sourcewen文件夹，新建一个文件名为“<strong>CNAME</strong>”的文件，注意没有文件后缀名！里面写入你申请的域名。</p>
+<p><img src="http://i.imgur.com/1SYsX1K.png" alt=""></p>
+<p><img src="http://i.imgur.com/5wJJjIR.png" alt=""></p>
+<p>接着来到域名的后台管理，我这边是通过万网注册的域名，直接登陆后台。点击 “<strong>解析</strong>”</p>
+<p><img src="http://i.imgur.com/ALTwkX1.png" alt=""></p>
+<p>输入我们之前ping到的ip地址</p>
+<p><img src="http://i.imgur.com/097JEax.png" alt=""></p>
+<p>完成以上步骤后，和之前本地发布文章一样，创建修改文章后，依次执行 <strong>hexo clean</strong> 、 <strong>hexo g</strong> 、 <strong>hexo d</strong>，执行 <strong>hexo d</strong> 命令的时候会要求你输入Github帐号密码，输入后等待片刻，网站就发布成功啦~</p>
+<p>大家有什么不明白的地方可以在下方留言…</p>
 
       
     </div>
