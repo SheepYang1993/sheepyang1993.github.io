@@ -12,7 +12,7 @@
 一、 Git工具、Node.js安装首先是搭建Hexo，需要安装 Git工具（Git安装教程） 以及 Node.js（Node.js安装教程）。安装完成">
 <meta property="og:type" content="article">
 <meta property="og:title" content="使用 Hexo + Github Pages 搭建个人博客">
-<meta property="og:url" content="http://www.sheepyang.me/2016/08/31/2016-08-31-create-my-blog/index.html">
+<meta property="og:url" content="http://www.sheepyang.me/2016/08/31/create-my-blog/index.html">
 <meta property="og:site_name" content="杨煜群个人博客">
 <meta property="og:description" content="前言
 一直想要搭建个人博客，网上搜了下资料，目前比较流行的是使用Hexo + GithubPage搭建静态网站。花费了一天时间把博客搭好了，现在记录整理下搭建过程以及所遇到的坑。想要拥有个人博客的朋友可以参照下，花费半小时搭建属于自己的博客。 
@@ -27,7 +27,18 @@
 <meta property="og:image" content="http://i.imgur.com/9bopeH7.png">
 <meta property="og:image" content="http://i.imgur.com/4b70tQt.png">
 <meta property="og:image" content="http://i.imgur.com/OBewksw.png">
-<meta property="og:updated_time" content="2016-09-01T01:31:05.521Z">
+<meta property="og:image" content="http://i.imgur.com/A2WG6bc.png">
+<meta property="og:image" content="http://i.imgur.com/sjU6mr5.png">
+<meta property="og:image" content="http://i.imgur.com/NampAre.png">
+<meta property="og:image" content="http://i.imgur.com/oyo3h8r.png">
+<meta property="og:image" content="http://i.imgur.com/j7uHMc4.png">
+<meta property="og:image" content="http://i.imgur.com/SgjQM20.png">
+<meta property="og:image" content="http://i.imgur.com/5rg0iH6.png">
+<meta property="og:image" content="http://i.imgur.com/lGZQHpi.png">
+<meta property="og:image" content="http://i.imgur.com/Wh07j8Z.png">
+<meta property="og:image" content="http://i.imgur.com/0cbSS57.png">
+<meta property="og:image" content="http://i.imgur.com/sRCmbto.png">
+<meta property="og:updated_time" content="2016-09-01T05:01:02.027Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用 Hexo + Github Pages 搭建个人博客">
 <meta name="twitter:description" content="前言
@@ -204,10 +215,10 @@
 	</div>
 </nav>
 
-      <div class="body-wrap"><article id="post-2016-08-31-create-my-blog" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-create-my-blog" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/08/31/2016-08-31-create-my-blog/" class="article-date">
+      <a href="/2016/08/31/create-my-blog/" class="article-date">
   	<time datetime="2016-08-31T13:27:23.000Z" itemprop="datePublished">2016-08-31</time>
 </a>
     </div>
@@ -263,7 +274,33 @@
 <p><img src="http://i.imgur.com/4b70tQt.png" alt=""></p>
 <p><img src="http://i.imgur.com/OBewksw.png" alt=""></p>
 <p>每次编辑、修改文章后执行: <strong>hexo clean</strong> ， <strong>hexo g</strong> 清除缓存重新编译，启动服务后可在本地查看博客。</p>
-<h3 id="三、-修改Hexo主题、配置"><a href="#三、-修改Hexo主题、配置" class="headerlink" title="三、 修改Hexo主题、配置"></a>三、 修改Hexo主题、配置</h3><p>待补充，这次先写到这里了…</p>
+<h3 id="三、-修改Hexo主题、配置"><a href="#三、-修改Hexo主题、配置" class="headerlink" title="三、 修改Hexo主题、配置"></a>三、 修改Hexo主题、配置</h3><p>Hexo静态博客想要安装主题也容易，在Github上找到你喜欢的主题，然后执行类似命令： <strong>git clone <a href="https://github.com/heroicyang/hexo-theme-modernist.git" target="_blank" rel="external">https://github.com/heroicyang/hexo-theme-modernist.git</a> themes/modernist</strong>  </p>
+<p>下面以本人博客主题Yilia为例,首先找到<a href="https://github.com/litten/hexo-theme-yilia" title="Yilia Github地址" target="_blank" rel="external">Yilia Github地址</a>,点击右上角 <strong>Clone or download</strong> 复制地址到粘贴板  </p>
+<p><img src="http://i.imgur.com/A2WG6bc.png" alt=""></p>
+<p>在 <strong>git bash</strong> 中执行： <strong>git clone <a href="https://github.com/litten/hexo-theme-yilia.git" target="_blank" rel="external">https://github.com/litten/hexo-theme-yilia.git</a> themes/yilia</strong>  </p>
+<p><img src="http://i.imgur.com/sjU6mr5.png" alt=""></p>
+<p>执行后yilia主题就下载在themes目录了</p>
+<p><img src="http://i.imgur.com/NampAre.png" alt=""></p>
+<p>接着配置Yilia主题，打开 <strong>_config.yml</strong> 文件（根目录下的_config.yml，不是themes文件下的_config.yml）将themes修改为yilia，与themes文件夹下yilia目录同名。</p>
+<p><img src="http://i.imgur.com/oyo3h8r.png" alt=""></p>
+<p>之后依次执行 <strong>hexo clean</strong> ， <strong>hexo g</strong> ， <strong>hexo s</strong> 重新编译生成静态页面，启动本地服务。打开 <strong><a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a></strong> 就可以预览效果啦！</p>
+<p><img src="http://i.imgur.com/j7uHMc4.png" alt=""></p>
+<p>接下来就是设置各种相关配置了，比如 姓名/头像/友情链接 等等。<br>先打开根目录下的<strong>_config.yml</strong>进行修改</p>
+<p><img src="http://i.imgur.com/SgjQM20.png" alt=""></p>
+<p>再打开themes/yilia主题下的<strong>_config.yml</strong>进行修改</p>
+<p><img src="http://i.imgur.com/5rg0iH6.png" alt=""></p>
+<p><img src="http://i.imgur.com/lGZQHpi.png" alt=""></p>
+<p><img src="http://i.imgur.com/Wh07j8Z.png" alt=""></p>
+<p>在配置完后，在这边也遇到了个坑，就是个人头像下面的小房子点击无反应，还有github、weibo的外链找不到图片资源，外加没有动画效果显示。最后在Yilia主题的issues下找到了解决方法，分别是<a href="https://github.com/litten/hexo-theme-yilia/pull/277" title="issues277" target="_blank" rel="external">issues277</a>和<a href="https://github.com/litten/hexo-theme-yilia/issues/288" title="issues288" target="_blank" rel="external">issues288</a>。如果不想看具体怎么解决的话，下载<a href="http://pan.baidu.com/s/1nvdGS6d" title="Yilia主题修复包" target="_blank" rel="external">Yilia主题修复包</a>，解压后覆盖替换掉 <strong>themes/yilia</strong> 目录下的 <strong>/source</strong> 、 <strong>/layout</strong> 、 <strong>/languages</strong> 三个文件夹。</p>
+<h3 id="四、-Hexo-部署至-Github-Pages"><a href="#四、-Hexo-部署至-Github-Pages" class="headerlink" title="四、 Hexo 部署至 Github Pages"></a>四、 Hexo 部署至 Github Pages</h3><blockquote>
+<p>终于有了自己的博客啦~ 不过现在你只能在本地浏览自己的博客，通过外网是不能直接访问到你的博客的。要在外网访问，我们必须拥有两个东西： <strong>域名</strong> 和 <strong>网络空间</strong> 。域名大家可以自行到万网上去申请，最便宜的域名才2块钱一年。网络空间我们使用Github Pages，它为我们提供了300M的免费空间。  </p>
+</blockquote>
+<p>接下来讲讲怎么把Hexo部署到Github Pages上，首先你要注册一个Github帐号（<a href="http://wiki.jikexueyuan.com/project/github-basics/sign-up.html" title="如何注册Github帐号" target="_blank" rel="external">如何注册Github帐号</a>）。注册过程中需要谷歌验证，如果你显示不了谷歌验证，你懂的那就是被“墙”了，使用vpn翻墙解决吧。  </p>
+<p>登陆Github，创建一个新的仓库</p>
+<p><img src="http://i.imgur.com/0cbSS57.png" alt=""></p>
+<p>仓库的名字是 <strong>xxx.github.io</strong> ， <strong>xxx</strong> 是你的账户名，比如我这边账户名是 <strong>SheepYang1993</strong> ，那么仓库名就是 <strong>sheepyang1993.github.io</strong></p>
+<p><img src="http://i.imgur.com/sRCmbto.png" alt=""></p>
+<p>完成该步骤你就可以访问 <strong>Github Pages</strong> 了，下面我们要把本地的Hexo博客部署到 <strong>Github Pages</strong> 上。</p>
 
       
     </div>
@@ -300,7 +337,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="2016-08-31-create-my-blog" data-title="使用 Hexo + Github Pages 搭建个人博客" data-url="http://www.sheepyang.me/2016/08/31/2016-08-31-create-my-blog/"></div>
+	<div class="ds-thread" data-thread-key="create-my-blog" data-title="使用 Hexo + Github Pages 搭建个人博客" data-url="http://www.sheepyang.me/2016/08/31/create-my-blog/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
