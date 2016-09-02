@@ -21,7 +21,7 @@ IDE上方提示
 Decompiled .class file, bytecode version XX(java X)
 Sources for &amp;apos;Android API XX Platform&amp;apos; n">
 <meta property="og:image" content="http://i.imgur.com/BXIdc1M.png">
-<meta property="og:updated_time" content="2016-09-02T02:30:45.668Z">
+<meta property="og:updated_time" content="2016-09-02T02:32:43.601Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="AndroidStudio找不到源码解决方法">
 <meta name="twitter:description" content="使用AndroidStudio2.1版本，想要查看SDK源码时，源码方法里显示  
@@ -241,7 +241,8 @@ Sources for &amp;apos;Android API XX Platform&amp;apos; n">
 <p>IDE上方提示  </p>
 <pre><code>Decompiled .class file, bytecode version XX(java X)
 Sources for &apos;Android API XX Platform&apos; not found.
-</code></pre><h3 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h3><p>首先下载源码，接着打开 <strong>C:\Users\username.AndroidStudioXXX\config\options\jdk.table.xm</strong>  </p>
+</code></pre><a id="more"></a>
+<h3 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h3><p>首先下载源码，接着打开 <strong>C:\Users\username.AndroidStudioXXX\config\options\jdk.table.xm</strong>  </p>
 <p>在 <strong>jdk.table.xm</strong> 文件中找到提示信息中对应的Android API 版本，修改源码存放路径，重启AndroidStudio就能看到源码了。</p>
 <p><img src="http://i.imgur.com/BXIdc1M.png" alt=""></p>
 
