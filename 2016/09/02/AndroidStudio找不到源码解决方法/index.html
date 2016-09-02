@@ -4,18 +4,32 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>Small插件化框架学习 | 杨煜群个人博客</title>
+  <title>AndroidStudio找不到源码解决方法 | 杨煜群个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="最近在学习Android Small插件化框架，记录一下心得经验，参考了下吴跃前的博客。以及csdn博客">
+  <meta name="description" content="使用AndroidStudio2.1版本，想要查看SDK源码时，源码方法里显示  
+throw new RuntimeException(&amp;quot;Stub!&amp;quot;);
+IDE上方提示  
+Decompiled .class file, bytecode version XX(java X)
+Sources for &amp;apos;Android API XX Platform&amp;apos; n">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Small插件化框架学习">
-<meta property="og:url" content="http://www.sheepyang.me/2016/09/01/Small插件化框架学习/index.html">
+<meta property="og:title" content="AndroidStudio找不到源码解决方法">
+<meta property="og:url" content="http://www.sheepyang.me/2016/09/02/AndroidStudio找不到源码解决方法/index.html">
 <meta property="og:site_name" content="杨煜群个人博客">
-<meta property="og:description" content="最近在学习Android Small插件化框架，记录一下心得经验，参考了下吴跃前的博客。以及csdn博客">
-<meta property="og:updated_time" content="2016-09-02T02:03:26.169Z">
+<meta property="og:description" content="使用AndroidStudio2.1版本，想要查看SDK源码时，源码方法里显示  
+throw new RuntimeException(&amp;quot;Stub!&amp;quot;);
+IDE上方提示  
+Decompiled .class file, bytecode version XX(java X)
+Sources for &amp;apos;Android API XX Platform&amp;apos; n">
+<meta property="og:image" content="http://i.imgur.com/BXIdc1M.png">
+<meta property="og:updated_time" content="2016-09-02T02:30:45.668Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Small插件化框架学习">
-<meta name="twitter:description" content="最近在学习Android Small插件化框架，记录一下心得经验，参考了下吴跃前的博客。以及csdn博客">
+<meta name="twitter:title" content="AndroidStudio找不到源码解决方法">
+<meta name="twitter:description" content="使用AndroidStudio2.1版本，想要查看SDK源码时，源码方法里显示  
+throw new RuntimeException(&amp;quot;Stub!&amp;quot;);
+IDE上方提示  
+Decompiled .class file, bytecode version XX(java X)
+Sources for &amp;apos;Android API XX Platform&amp;apos; n">
+<meta name="twitter:image" content="http://i.imgur.com/BXIdc1M.png">
   
     <link rel="alternative" href="/atom.xml" title="杨煜群个人博客" type="application/atom+xml">
   
@@ -185,11 +199,11 @@
 	</div>
 </nav>
 
-      <div class="body-wrap"><article id="post-Small插件化框架学习" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-AndroidStudio找不到源码解决方法" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/09/01/Small插件化框架学习/" class="article-date">
-  	<time datetime="2016-09-01T07:15:02.000Z" itemprop="datePublished">2016-09-01</time>
+      <a href="/2016/09/02/AndroidStudio找不到源码解决方法/" class="article-date">
+  	<time datetime="2016-09-02T02:02:00.000Z" itemprop="datePublished">2016-09-02</time>
 </a>
     </div>
   
@@ -202,7 +216,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Small插件化框架学习
+      AndroidStudio找不到源码解决方法
     </h1>
   
 
@@ -211,7 +225,7 @@
       <div class="article-info article-info-post">
         
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/插件化/">插件化</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li></ul>
 	</div>
 
         
@@ -222,7 +236,14 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>最近在学习Android Small插件化框架，记录一下心得经验，参考了下<a href="http://www.cnblogs.com/yueqian-scut/p/5337103.html" title="吴跃前的博客" target="_blank" rel="external">吴跃前的博客</a>。以及<a href="http://blog.csdn.net/xmh19936688/article/details/50546222#新建project" title="csdn博客" target="_blank" rel="external">csdn博客</a></p>
+        <p>使用AndroidStudio2.1版本，想要查看SDK源码时，源码方法里显示  </p>
+<p><code>throw new RuntimeException(&quot;Stub!&quot;);</code></p>
+<p>IDE上方提示  </p>
+<pre><code>Decompiled .class file, bytecode version XX(java X)
+Sources for &apos;Android API XX Platform&apos; not found.
+</code></pre><h3 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h3><p>首先下载源码，接着打开 <strong>C:\Users\username.AndroidStudioXXX\config\options\jdk.table.xm</strong>  </p>
+<p>在 <strong>jdk.table.xm</strong> 文件中找到提示信息中对应的Android API 版本，修改源码存放路径，重启AndroidStudio就能看到源码了。</p>
+<p><img src="http://i.imgur.com/BXIdc1M.png" alt=""></p>
 
       
     </div>
@@ -232,18 +253,9 @@
     
 <nav id="article-nav">
   
-    <a href="/2016/09/02/AndroidStudio找不到源码解决方法/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          AndroidStudio找不到源码解决方法
-        
-      </div>
-    </a>
   
-  
-    <a href="/2016/08/31/create-my-blog/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">使用 Hexo + Github Pages 搭建个人博客</div>
+    <a href="/2016/09/01/Small插件化框架学习/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Small插件化框架学习</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -278,7 +290,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="Small插件化框架学习" data-title="Small插件化框架学习" data-url="http://www.sheepyang.me/2016/09/01/Small插件化框架学习/"></div>
+	<div class="ds-thread" data-thread-key="AndroidStudio找不到源码解决方法" data-title="AndroidStudio找不到源码解决方法" data-url="http://www.sheepyang.me/2016/09/02/AndroidStudio找不到源码解决方法/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">

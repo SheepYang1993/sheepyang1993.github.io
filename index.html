@@ -114,7 +114,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/android/" style="font-size: 10px;">android</a> <a href="/tags/html/" style="font-size: 10px;">html</a> <a href="/tags/插件化/" style="font-size: 10px;">插件化</a> <a href="/tags/教程/" style="font-size: 10px;">教程</a>
+						<a href="/tags/Android/" style="font-size: 20px;">Android</a> <a href="/tags/html/" style="font-size: 10px;">html</a> <a href="/tags/插件化/" style="font-size: 10px;">插件化</a> <a href="/tags/教程/" style="font-size: 10px;">教程</a>
 					</div>
 				</section>
 				
@@ -186,6 +186,70 @@
 
       <div class="body-wrap">
   
+    <article id="post-AndroidStudio找不到源码解决方法" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/09/02/AndroidStudio找不到源码解决方法/" class="article-date">
+  	<time datetime="2016-09-02T02:02:00.000Z" itemprop="datePublished">2016-09-02</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/09/02/AndroidStudio找不到源码解决方法/">AndroidStudio找不到源码解决方法</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>使用AndroidStudio2.1版本，想要查看SDK源码时，源码方法里显示  </p>
+<p><code>throw new RuntimeException(&quot;Stub!&quot;);</code></p>
+<p>IDE上方提示  </p>
+<pre><code>Decompiled .class file, bytecode version XX(java X)
+Sources for &apos;Android API XX Platform&apos; not found.
+</code></pre><h3 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h3><p>首先下载源码，接着打开 <strong>C:\Users\username.AndroidStudioXXX\config\options\jdk.table.xm</strong>  </p>
+<p>在 <strong>jdk.table.xm</strong> 文件中找到提示信息中对应的Android API 版本，修改源码存放路径，重启AndroidStudio就能看到源码了。</p>
+<p><img src="http://i.imgur.com/BXIdc1M.png" alt=""></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="post-Small插件化框架学习" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -221,7 +285,7 @@
       
       
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/android/">android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/插件化/">插件化</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/插件化/">插件化</a></li></ul>
 	</div>
 
       
