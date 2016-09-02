@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>使用 Hexo + Github Pages 搭建个人博客 | 杨煜群个人博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="前言
+一直想要搭建个人博客，网上搜了下资料，目前比较流行的是使用Hexo + GithubPage搭建静态网站。花费了一天时间把博客搭好了，现在记录整理下搭建过程以及所遇到的坑。想要拥有个人博客的朋友可以参照下，花费半小时搭建属于自己的博客。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用 Hexo + Github Pages 搭建个人博客">
+<meta property="og:url" content="http://www.sheepyang.me/2016/08/31/create-my-blog/index.html">
+<meta property="og:site_name" content="杨煜群个人博客">
+<meta property="og:description" content="前言
+一直想要搭建个人博客，网上搜了下资料，目前比较流行的是使用Hexo + GithubPage搭建静态网站。花费了一天时间把博客搭好了，现在记录整理下搭建过程以及所遇到的坑。想要拥有个人博客的朋友可以参照下，花费半小时搭建属于自己的博客。">
+<meta property="og:image" content="http://i.imgur.com/kEH5Ecp.png">
+<meta property="og:image" content="http://i.imgur.com/doLxeZx.gif">
+<meta property="og:image" content="http://i.imgur.com/mkl6yWd.png">
+<meta property="og:image" content="http://i.imgur.com/yj9GT4B.png">
+<meta property="og:image" content="http://i.imgur.com/bDSlPPY.png">
+<meta property="og:image" content="http://i.imgur.com/SisLZU9.png">
+<meta property="og:image" content="http://i.imgur.com/9bopeH7.png">
+<meta property="og:image" content="http://i.imgur.com/4b70tQt.png">
+<meta property="og:image" content="http://i.imgur.com/OBewksw.png">
+<meta property="og:image" content="http://i.imgur.com/A2WG6bc.png">
+<meta property="og:image" content="http://i.imgur.com/sjU6mr5.png">
+<meta property="og:image" content="http://i.imgur.com/NampAre.png">
+<meta property="og:image" content="http://i.imgur.com/oyo3h8r.png">
+<meta property="og:image" content="http://i.imgur.com/j7uHMc4.png">
+<meta property="og:image" content="http://i.imgur.com/SgjQM20.png">
+<meta property="og:image" content="http://i.imgur.com/5rg0iH6.png">
+<meta property="og:image" content="http://i.imgur.com/lGZQHpi.png">
+<meta property="og:image" content="http://i.imgur.com/Wh07j8Z.png">
+<meta property="og:image" content="http://i.imgur.com/0cbSS57.png">
+<meta property="og:image" content="http://i.imgur.com/sRCmbto.png">
+<meta property="og:image" content="http://i.imgur.com/PmmUXQp.png">
+<meta property="og:image" content="http://i.imgur.com/7DgbYHx.png">
+<meta property="og:image" content="http://i.imgur.com/1SYsX1K.png">
+<meta property="og:image" content="http://i.imgur.com/5wJJjIR.png">
+<meta property="og:image" content="http://i.imgur.com/ALTwkX1.png">
+<meta property="og:image" content="http://i.imgur.com/097JEax.png">
+<meta property="og:updated_time" content="2016-09-01T09:24:44.332Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="使用 Hexo + Github Pages 搭建个人博客">
+<meta name="twitter:description" content="前言
+一直想要搭建个人博客，网上搜了下资料，目前比较流行的是使用Hexo + GithubPage搭建静态网站。花费了一天时间把博客搭好了，现在记录整理下搭建过程以及所遇到的坑。想要拥有个人博客的朋友可以参照下，花费半小时搭建属于自己的博客。">
+<meta name="twitter:image" content="http://i.imgur.com/kEH5Ecp.png">
+  
+    <link rel="alternative" href="/atom.xml" title="杨煜群个人博客" type="application/atom+xml">
+  
+  
+    
+      <link rel="icon" href="/favicon.png">
+    
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img src="https://avatars3.githubusercontent.com/u/15150244?v=3&amp;s=460" class="js-avatar show">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">杨煜群</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">Android程序猿</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						<li>友情链接</li>
+						
+						
+						<li>关于我</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/sheepyang1993" title="github">github</a>
+					        
+								<a class="weibo" target="_blank" href="http://weibo.com/u/2380598401" title="weibo">weibo</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/Android/" style="font-size: 20px;">Android</a> <a href="/tags/html/" style="font-size: 10px;">html</a> <a href="/tags/插件化/" style="font-size: 10px;">插件化</a> <a href="/tags/教程/" style="font-size: 10px;">教程</a> <a href="/tags/源码/" style="font-size: 10px;">源码</a>
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://www.bilibili.com/">哔哩哔哩弹幕视频网</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">Android程序猿，坐标厦门，欢迎前来搞基。</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">杨煜群</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				
+					<img src="https://avatars3.githubusercontent.com/u/15150244?v=3&amp;s=460" class="js-avatar show">
+				
+			</div>
+			<hgroup>
+			  <h1 class="header-author">杨煜群</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">Android程序猿</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/sheepyang1993" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/u/2380598401" title="weibo">weibo</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap"><article id="post-create-my-blog" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/08/31/create-my-blog/" class="article-date">
+  	<time datetime="2016-08-31T13:27:23.000Z" itemprop="datePublished">2016-08-31</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      使用 Hexo + Github Pages 搭建个人博客
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html/">html</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/教程/">教程</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><blockquote>
+<p><strong>一直想要搭建个人博客，网上搜了下资料，目前比较流行的是使用Hexo + GithubPage搭建静态网站。花费了一天时间把博客搭好了，现在记录整理下搭建过程以及所遇到的坑。想要拥有个人博客的朋友可以参照下，花费半小时搭建属于自己的博客。</strong> </p>
+</blockquote>
+<a id="more"></a>
+<h3 id="一、-Git工具、Node-js安装"><a href="#一、-Git工具、Node-js安装" class="headerlink" title="一、 Git工具、Node.js安装"></a>一、 Git工具、Node.js安装</h3><p>首先是搭建Hexo，需要安装 <strong>Git工具</strong><a href="http://jingyan.baidu.com/article/e52e36154233ef40c70c5153.html" title="（Git安装教程）" target="_blank" rel="external">（Git安装教程）</a> 以及 <strong>Node.js</strong><a href="http://www.runoob.com/nodejs/nodejs-install-setup.html" title="（Node.js安装教程）" target="_blank" rel="external">（Node.js安装教程）</a>。安装完成后，在桌面空白处右键打开 <strong>git bash</strong> 命令行工具。</p>
+<p><img src="http://i.imgur.com/kEH5Ecp.png" alt=""></p>
+<h3 id="二、-Hexo的安装及使用"><a href="#二、-Hexo的安装及使用" class="headerlink" title="二、 Hexo的安装及使用"></a>二、 Hexo的安装及使用</h3><p>打开 <strong>Git Bash</strong>，执行以下命令开始安装Hexo：<strong>npm install -g hexo</strong></p>
+<p><img src="http://i.imgur.com/doLxeZx.gif" alt=""></p>
+<p>安装成功后，新建一个文件夹用来存放你的博客以及相关配置。在 <strong>git bash</strong> 中输入 <strong>cd path</strong> 进入到新建的文件夹， <strong>path</strong> 是新建文件夹的路径。</p>
+<p><img src="http://i.imgur.com/mkl6yWd.png" alt=""></p>
+<p>执行： <strong>hexo init</strong> 进行初始化</p>
+<p><img src="http://i.imgur.com/yj9GT4B.png" alt=""></p>
+<p>接着执行以下命令生成静态页面至public目录： <strong>hexo g</strong>  </p>
+<p><img src="http://i.imgur.com/bDSlPPY.png" alt=""></p>
+<p>完成以上步骤后，Hexo就算是搭建好了。  </p>
+<p>接下来我们就可以在本地预览我们的博客了！<br>执行 <strong>hexo s</strong> 启动服务</p>
+<p><img src="http://i.imgur.com/SisLZU9.png" alt=""></p>
+<p>打开 <strong><a href="https://localhost:4000" target="_blank" rel="external">https://localhost:4000</a></strong> 就可以看到效果了。如果打不开，可能是4000端口被占用了，那我们可以换个端口号启动服务，执行 <strong>hexo s -p 5000</strong> 打开 <strong><a href="https://localhost:5000" target="_blank" rel="external">https://localhost:5000</a></strong> 就可以看到效果了。按 <strong>Ctrl + C</strong> 可以停止服务。</p>
+<p><img src="http://i.imgur.com/9bopeH7.png" alt=""></p>
+<p>到这步为止，我们的博客就可以使用啦！那怎么发布博文呢？<br>首先执行： <strong>hexo new “my new post”</strong> ，其中 <strong>my new post</strong> 为文章标题。在 <strong>/source/_posts/</strong> 目录下就可以看到新创建的md文件了。文章的编写需要使用 <strong>markdown</strong> 语法编写文章， <a href="http://www.jianshu.com/p/1e402922ee32/" title="**markdown**使用方法" target="_blank" rel="external"><strong>markdown</strong>使用方法</a>、<a href="http://www.9553.com/soft/48314.htm" title="**markdown**编辑工具" target="_blank" rel="external"><strong>markdown</strong>编辑工具</a></p>
+<p><img src="http://i.imgur.com/4b70tQt.png" alt=""></p>
+<p><img src="http://i.imgur.com/OBewksw.png" alt=""></p>
+<p>每次编辑、修改文章后执行: <strong>hexo clean</strong> ， <strong>hexo g</strong> 清除缓存重新编译，启动服务后可在本地查看博客。</p>
+<h3 id="三、-修改Hexo主题、配置"><a href="#三、-修改Hexo主题、配置" class="headerlink" title="三、 修改Hexo主题、配置"></a>三、 修改Hexo主题、配置</h3><p>Hexo静态博客想要安装主题也容易，在Github上找到你喜欢的主题，然后执行类似命令： <strong>git clone <a href="https://github.com/heroicyang/hexo-theme-modernist.git" target="_blank" rel="external">https://github.com/heroicyang/hexo-theme-modernist.git</a> themes/modernist</strong>  </p>
+<p>这边有一些常用的主题大家可以拿去用 <a href="http://www.zhihu.com/question/24422335" title="Hexo主题" target="_blank" rel="external">Hexo主题</a></p>
+<p>下面以本人博客主题Yilia为例,首先找到<a href="https://github.com/litten/hexo-theme-yilia" title="Yilia Github地址" target="_blank" rel="external">Yilia Github地址</a>,点击右上角 <strong>Clone or download</strong> 复制地址到粘贴板  </p>
+<p><img src="http://i.imgur.com/A2WG6bc.png" alt=""></p>
+<p>在 <strong>git bash</strong> 中执行： <strong>git clone <a href="https://github.com/litten/hexo-theme-yilia.git" target="_blank" rel="external">https://github.com/litten/hexo-theme-yilia.git</a> themes/yilia</strong>  </p>
+<p><img src="http://i.imgur.com/sjU6mr5.png" alt=""></p>
+<p>执行后yilia主题就下载在themes目录了</p>
+<p><img src="http://i.imgur.com/NampAre.png" alt=""></p>
+<p>接着配置Yilia主题，打开 <strong>_config.yml</strong> 文件（根目录下的 <strong>_config.yml</strong> ，不是themes文件下的 <strong>_config.yml</strong> ）将themes修改为yilia，与themes文件夹下yilia目录同名。</p>
+<p><img src="http://i.imgur.com/oyo3h8r.png" alt=""></p>
+<p>之后依次执行 <strong>hexo clean</strong> ， <strong>hexo g</strong> ， <strong>hexo s</strong> 重新编译生成静态页面，启动本地服务。打开 <strong><a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a></strong> 就可以预览效果啦！</p>
+<p><img src="http://i.imgur.com/j7uHMc4.png" alt=""></p>
+<p>接下来就是设置各种相关配置了，比如 姓名/头像/友情链接 等等。<br>先打开根目录下的 <strong>_config.yml</strong> 进行修改</p>
+<p><img src="http://i.imgur.com/SgjQM20.png" alt=""></p>
+<p>再打开themes/yilia主题下的<strong>_config.yml</strong>进行修改</p>
+<p><img src="http://i.imgur.com/5rg0iH6.png" alt=""></p>
+<p><img src="http://i.imgur.com/lGZQHpi.png" alt=""></p>
+<p><img src="http://i.imgur.com/Wh07j8Z.png" alt=""></p>
+<p>在配置完后，在这边也遇到了个坑，就是个人头像下面的小房子点击无反应，还有github、weibo的外链找不到图片资源，外加没有动画效果显示。最后在Yilia主题的issues下找到了解决方法，分别是<a href="https://github.com/litten/hexo-theme-yilia/pull/277" title="issues277" target="_blank" rel="external">issues277</a>和<a href="https://github.com/litten/hexo-theme-yilia/issues/288" title="issues288" target="_blank" rel="external">issues288</a>。如果不想看具体怎么解决的话，下载<a href="http://pan.baidu.com/s/1nvdGS6d" title="Yilia主题修复包" target="_blank" rel="external">Yilia主题修复包</a>，解压后覆盖替换掉 <strong>themes/yilia</strong> 目录下的 <strong>/source</strong> 、 <strong>/layout</strong> 、 <strong>/languages</strong> 三个文件夹。</p>
+<h3 id="四、-Hexo-部署至-Github-Pages"><a href="#四、-Hexo-部署至-Github-Pages" class="headerlink" title="四、 Hexo 部署至 Github Pages"></a>四、 Hexo 部署至 Github Pages</h3><blockquote>
+<p>终于有了自己的博客啦~ 不过现在你只能在本地浏览自己的博客，通过外网是不能直接访问到你的博客的。要在外网访问，我们必须拥有两个东西： <strong>域名</strong> 和 <strong>网络空间</strong> 。域名大家可以自行到万网上去申请，最便宜的域名才2块钱一年。网络空间我们使用Github Pages，它为我们提供了300M的免费空间。  </p>
+</blockquote>
+<p>接下来讲讲怎么把Hexo部署到Github Pages上，首先你要注册一个Github帐号（<a href="http://wiki.jikexueyuan.com/project/github-basics/sign-up.html" title="如何注册Github帐号" target="_blank" rel="external">如何注册Github帐号</a>）。注册过程中需要谷歌验证，如果你显示不了谷歌验证，你懂的那就是被“墙”了，使用vpn翻墙解决吧。  </p>
+<p>登陆Github，创建一个新的仓库</p>
+<p><img src="http://i.imgur.com/0cbSS57.png" alt=""></p>
+<p>仓库的名字是 <strong>xxx.github.io</strong> ， <strong>xxx</strong> 是你的账户名，比如我这边账户名是 <strong>SheepYang1993</strong> ，那么仓库名就是 <strong>sheepyang1993.github.io</strong></p>
+<p><img src="http://i.imgur.com/sRCmbto.png" alt=""></p>
+<p>完成该步骤你就可以访问 <strong>Github Pages</strong> 了，下面我们要把本地的Hexo博客部署到 <strong>Github Pages</strong> 上。</p>
+<p>首先我们打开 <strong>cmd</strong> 命令行工具，输入 <strong>ping xxx.github.io</strong> 命令， <strong>xxx</strong> 是你Github的账户名，获得 <strong>xxx.github.io</strong> 的ip地址</p>
+<p>打开根目录下的 <strong>_config.yml</strong> ，设置你要部署的Github地址</p>
+<p><img src="http://i.imgur.com/PmmUXQp.png" alt=""></p>
+<p><img src="http://i.imgur.com/7DgbYHx.png" alt=""></p>
+<p>打开根目录下的/sourcewen文件夹，新建一个文件名为“<strong>CNAME</strong>”的文件，注意没有文件后缀名！里面写入你申请的域名。</p>
+<p><img src="http://i.imgur.com/1SYsX1K.png" alt=""></p>
+<p><img src="http://i.imgur.com/5wJJjIR.png" alt=""></p>
+<p>接着来到域名的后台管理，我这边是通过万网注册的域名，直接登陆后台。点击 “<strong>解析</strong>”</p>
+<p><img src="http://i.imgur.com/ALTwkX1.png" alt=""></p>
+<p>输入我们之前ping到的ip地址</p>
+<p><img src="http://i.imgur.com/097JEax.png" alt=""></p>
+<p>完成以上步骤后，和之前本地发布文章一样，创建修改文章后，依次执行 <strong>hexo clean</strong> 、 <strong>hexo g</strong> 、 <strong>hexo d</strong>，执行 <strong>hexo d</strong> 命令的时候会要求你输入Github帐号密码，输入后等待片刻，网站就发布成功啦~</p>
+<p>参考文章：<a href="http://blog.csdn.net/willxue123/article/details/50994852" title="Hexo系列教程之三：next主题的配置和优化" target="_blank" rel="external">Hexo系列教程之三：next主题的配置和优化</a></p>
+<p>大家有什么不明白的地方可以在下方留言…</p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/09/01/Small插件化框架学习/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          Small插件化框架学习
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+    <a class="jiathis_button_twitter"></a>
+    <a class="jiathis_button_plus"></a> 
+    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="create-my-blog" data-title="使用 Hexo + Github Pages 搭建个人博客" data-url="http://www.sheepyang.me/2016/08/31/create-my-blog/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"sheepyang"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 杨煜群
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false,
+		root: '/'
+	}
+</script>
+<script>
+	(function(){
+		document.write('<scr'+'ipt type="text/javascript" src="'+document.location.protocol+'//7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js">'+'</sc'+'ript>');
+	})();
+</script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script>
+	(function(){
+		document.write('<scr'+'ipt type="text/javascript" src="'+document.location.protocol+'//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">'+'</sc'+'ript>');
+	})();
+</script>
+
+
+  </div>
+</body>
+</html>
