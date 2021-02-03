@@ -1,6 +1,6 @@
 {
-    "name": "sheep_flutter_web_demo",
-    "short_name": "sheep_flutter_web_demo",
+    "name": "sheep_flutter_blog",
+    "short_name": "sheep_flutter_blog",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
