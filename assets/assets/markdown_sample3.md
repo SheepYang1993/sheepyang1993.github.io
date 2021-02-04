@@ -65,6 +65,10 @@ row 1 col 1 | row 1 col 2
 row 2 col 1 | row 2 col 2
 
 
+Video:
+
+<video src="http://vfx.mtime.cn/Video/2019/03/17/mp4/190317150237409904.mp4">
+
 Image:
 
 ![support](https://s3.ax1x.com/2021/02/03/yMywCQ.png)
@@ -76,7 +80,3 @@ Image with link:
 Html Image:
 
 <img width="250" height="250" src="https://s3.ax1x.com/2021/02/03/yMywCQ.png"/>
-
-Video:
-
-<video src="http://www.w3school.com.cn/i/movie.mp4">
