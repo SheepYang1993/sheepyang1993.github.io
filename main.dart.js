@@ -67889,7 +67889,7 @@ r.d.dJ(0)},
 J:function(a,b){var s,r,q,p,o,n=this,m=null,l=$.fy,k=1334*($.Hs/l.a.b)-$.alX/$.alW
 l=X.aeY(b)
 s=L.dr("\u61d2\u6d0b\u541b\u535a\u5ba2-\u7f51\u9875\u7aef",m,m,A.d1(m,m,new P.h(((C.e.cU(n.f*255,1)&255)<<24|16777215)>>>0),m,m,m,m,m,m,m,m,m,m,m,m,m,!0,m,m,m,m,m,m),m,m)
-r=M.bn(m,U.mW("https://cdn.nlark.com/yuque/0/2021/jpeg/2721790/1612755041716-c29e684e-6849-46f7-bd1a-fc06228be878.jpeg",C.fn,m,m),m,m,m,m,m,m,m)
+r=M.bn(m,U.mW("https://www.hualigs.cn/image/6020e141c21eb.jpg",C.fn,m,m),m,m,m,m,m,m,m)
 q=$.fy
 p=t.gI
 o=E.am3(l,C.p,k,Z.akr(T.k9(C.ai,H.b([r,T.Gm(0*($.hd/q.a.a),M.bn(m,new S.BL(new R.aQ(1,0,p),new R.aQ(0,50,p),n.e,m),m,m,m,m,m,m,m),m,m,m,m,m,m)],t.Y),C.pe)),!0,s)
